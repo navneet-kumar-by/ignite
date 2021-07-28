@@ -16,12 +16,12 @@ public class DemoConfig {
 
     @Bean
     public IgniteConfigurer configurer() {
-        DataStorageConfiguration storageCfg = new DataStorageConfiguration();
-        storageCfg.getDefaultDataRegionConfiguration().setPersistenceEnabled(true);
+//        DataStorageConfiguration storageCfg = new DataStorageConfiguration();
+//        storageCfg.getDefaultDataRegionConfiguration().setPersistenceEnabled(true);
 
         return igniteConfiguration -> {
-            igniteConfiguration.setClientMode(true);
-            igniteConfiguration.setDataStorageConfiguration(storageCfg);
+            igniteConfiguration.setClientMode(false);
+//            igniteConfiguration.setDataStorageConfiguration(storageCfg);
 
         };
     }
